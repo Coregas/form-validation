@@ -1,0 +1,12 @@
+{
+  "autoload": {
+    "psr-4": {
+      "Emotion\\": "src/"
+    }
+  },
+  "require": {
+    "symfony/dependency-injection": "*",
+    "symfony/var-dumper": "^4.0",
+    "catfan/Medoo": "^1.5"
+  }
+}
