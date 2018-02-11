@@ -22,4 +22,22 @@ class Message
         $this->gateway = $gateway;
     }
 
+    /**
+     * @param int $id
+     * @return array
+     */
+    public function getMessageById(int $id) : array
+    {
+        return $this->gateway->select($this->table, '*', ['id' => $id]);
+    }
+
+    /**
+     * @param int $userId
+     * @return array
+     */
+    public function getMessagesByUserId(int $userId) : array
+    {
+        return $this->gateway->select($this->table, '*', ['user_id' => $userId]);
+    }
+
 }

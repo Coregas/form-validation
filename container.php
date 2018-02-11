@@ -27,3 +27,7 @@ $container->register('message_gateway', \Emotion\Gateway\Message::class)
         new Reference('medoo_db')
     ]);
 
+$container->register('form_validator', \Emotion\Service\FormValidator::class);
+
+$container->register('index_controller', \Emotion\Controllers\Index::class);
+

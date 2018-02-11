@@ -2,9 +2,8 @@
 
 require_once __DIR__ . '/bootstrap.php';
 
-dump(__DIR__ . '/bootstrap.php');
-$ug = $container->get('user_gateway');
-//$bar = $doctrine->em->find(Emotion\Models\Entity\User::class, 1);
-dump($bar);
+$formValidator = $container->get('form_validator');
 
-echo file_get_contents('src/Views/main.php');
+if ($formValidator->isFormSubmited()) {
+    dump($_POST);
+}
